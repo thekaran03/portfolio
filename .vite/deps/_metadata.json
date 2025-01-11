@@ -1,0 +1,80 @@
+{
+  "hash": "9e4968f0",
+  "browserHash": "69358b37",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "6d056298",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "3fae009a",
+      "needsInterop": true
+    },
+    "gsap": {
+      "src": "../../node_modules/gsap/index.js",
+      "file": "gsap.js",
+      "fileHash": "250c81cb",
+      "needsInterop": false
+    },
+    "gsap/ScrollTrigger": {
+      "src": "../../node_modules/gsap/ScrollTrigger.js",
+      "file": "gsap_ScrollTrigger.js",
+      "fileHash": "c55ce136",
+      "needsInterop": false
+    },
+    "webfontloader": {
+      "src": "../../node_modules/webfontloader/webfontloader.js",
+      "file": "webfontloader.js",
+      "fileHash": "bd075e12",
+      "needsInterop": true
+    },
+    "vanta/dist/vanta.birds.min": {
+      "src": "../../node_modules/vanta/dist/vanta.birds.min.js",
+      "file": "vanta_dist_vanta__birds__min.js",
+      "fileHash": "badf5069",
+      "needsInterop": true
+    },
+    "three": {
+      "src": "../../node_modules/three/build/three.module.js",
+      "file": "three.js",
+      "fileHash": "55cfbe6b",
+      "needsInterop": false
+    },
+    "gsap/all": {
+      "src": "../../node_modules/gsap/all.js",
+      "file": "gsap_all.js",
+      "fileHash": "a0c45de3",
+      "needsInterop": false
+    },
+    "@studio-freight/lenis": {
+      "src": "../../node_modules/@studio-freight/lenis/dist/lenis.modern.mjs",
+      "file": "@studio-freight_lenis.js",
+      "fileHash": "cdfc3418",
+      "needsInterop": false
+    },
+    "@iconify/react": {
+      "src": "../../node_modules/@iconify/react/dist/iconify.mjs",
+      "file": "@iconify_react.js",
+      "fileHash": "ebfc3f16",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-ZAUFE7H7": {
+      "file": "chunk-ZAUFE7H7.js"
+    },
+    "chunk-MACZ4VV3": {
+      "file": "chunk-MACZ4VV3.js"
+    },
+    "chunk-XOIPKAOZ": {
+      "file": "chunk-XOIPKAOZ.js"
+    },
+    "chunk-UXIASGQL": {
+      "file": "chunk-UXIASGQL.js"
+    }
+  }
+}
