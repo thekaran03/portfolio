@@ -2,35 +2,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import WebFont from 'webfontloader';
-import NET from 'vanta/dist/vanta.net.min'
-import * as THREE from 'three';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function Hero(props) {
-
-  const [vantaEffect, setVantaEffect] = useState(null)
-  const myRef = useRef(null)
-  useEffect(() => {
-    if (!vantaEffect) {
-      setVantaEffect(NET({
-        el: myRef.current,
-        THREE: THREE,
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        backgroundColor: 0xffffff,
-        color1: 0x23153c
-      }))
-    }
-    return () => {
-      if (vantaEffect) vantaEffect.destroy()
-    }
-  }, [vantaEffect])
-
 
   const cta = useRef(null);
   const tl = gsap.timeline();
@@ -53,7 +27,7 @@ export default function Hero(props) {
   }, []);
 
   return (
-    <div className="z-0 relative w-full h-screen flex items-center justify-center bg-secondary-100 overflow-hidden" ref={myRef}>
+    <div className="z-0 relative w-full h-screen flex items-center justify-center bg-secondary-100 overflow-hidden">
       {/* Particle Background */}
 
       {/* Hero Content */}
