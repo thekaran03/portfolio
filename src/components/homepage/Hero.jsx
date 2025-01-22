@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import WebFont from 'webfontloader';
-import BIRDS from 'vanta/dist/vanta.birds.min'
+import NET from 'vanta/dist/vanta.net.min'
 import * as THREE from 'three';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -12,7 +12,7 @@ export default function Hero(props) {
   const myRef = useRef(null)
   useEffect(() => {
     if (!vantaEffect) {
-      setVantaEffect(BIRDS({
+      setVantaEffect(NET({
         el: myRef.current,
         THREE: THREE,
         mouseControls: true,
@@ -23,7 +23,7 @@ export default function Hero(props) {
         scale: 1.00,
         scaleMobile: 1.00,
         backgroundColor: 0xffffff,
-        color1: 0xeb1111
+        color1: 0x23153c
       }))
     }
     return () => {
