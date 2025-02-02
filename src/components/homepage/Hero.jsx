@@ -1,10 +1,16 @@
 // import ParticlesCanvas from "./ParticleCanvas";
 import React, { useState, useEffect, useRef } from "react";
+// import ReactDOM from 'react-dom';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { gsap } from "gsap";
 import WebFont from 'webfontloader';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Icon } from "@iconify/react";
+
 
 export default function Hero(props) {
+  const [copyState, setCopyState] = useState({ value: 'npx karancodes', copied: false });
+
 
   const cta = useRef(null);
   const tl = gsap.timeline();
@@ -26,6 +32,14 @@ export default function Hero(props) {
     });
   }, []);
 
+  const handleCopy = () => {
+    setCopyState({ ...copyState, copied: true });
+    setTimeout(() => {
+      setCopyState({ ...copyState, copied: false });
+    }, 3000); // Removes "Copied" after 3 seconds
+  };
+
+
   return (
     <div className="z-0 relative w-full h-screen flex items-center justify-center bg-secondary-100 overflow-hidden">
       {/* Particle Background */}
@@ -41,16 +55,35 @@ export default function Hero(props) {
         <p style={{ fontFamily: 'Caveat' }} className="text-black text-[1.5rem] font-medium mb-6">
           A digital designer and creative developer from India passionate about creating memorable experiences.
         </p>
-        <a
+
+        {/* <CopyToClipboard text={this.state.value}
+          onCopy={() => this.setState({copied: true})}>
+          <span>Copy to clipboard with span</span>
+        </CopyToClipboard> */}
+
+        <div className="flex justify-center">
+          <div className="w-[20rem] relative flex flex-row justify-around border-2 bg-black text-white h-14 p-2 text-2xl rounded-full font-bold">
+            <span>npx karancodes</span>
+            <CopyToClipboard text={copyState.value} onCopy={handleCopy}>
+              <Icon icon="mdi:content-copy" width="24" height="24" className="mt-1" />
+            </CopyToClipboard>
+
+            {/* Copied message */}
+            {copyState.copied && (
+              <span className="copiedMessage">Copied.</span>
+            )}
+          </div>
+        </div>
+        {/* <a
           ref={cta}
           className="button group relative hover:bg-transparent"
           href="#contact"
         >
           <span className="relative w-fit">
-            <span className="absolute bottom-2 h-[0.15em] w-0 bg-secondary-700 opacity-90 duration-300 ease-out group-hover:w-full"></span>
-            <span>Let&apos;s Talk.</span>
+            <span className="absolute bottom-2 h-[0.15em] w-0 bg-secondary-700"></span>
+            <span>npx karan</span>
           </span>
-        </a>
+        </a> */}
       </div>
     </div>
   );

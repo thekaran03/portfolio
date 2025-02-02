@@ -94,3 +94,15 @@
   }
 }
 
+
+.copiedMessage {
+  position: absolute;
+  top: -25px; /* Adjust this value to position it above the parent div */
+  left: 70%; /* Centers it horizontally */
+  transform: translateX(-50%); /* Centers it exactly */
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  transition: opacity 0.3s ease; /* Optional: smooth transition for fade out */
+}
+
